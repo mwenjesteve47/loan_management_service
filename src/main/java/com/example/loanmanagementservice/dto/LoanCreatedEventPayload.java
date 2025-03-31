@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 public class LoanCreatedEventPayload {
     private Long customerId;
     private Long loanId;
+    private String loanName;
     private BigDecimal amount;
     private LocalDate dueDate;
     private String loanState;

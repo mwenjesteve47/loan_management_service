@@ -45,6 +45,8 @@ public class LoanHelper {
         LoanOverdueEventPayload loanOverdueEventPayload = new LoanOverdueEventPayload(
                 loan.getCustomer().getId(),
                 loan.getId(),
+                loan.getLoanProduct().getName(),
+                loan.getCustomer().getFirstName(),
                 loan.getAmountDue(),
                 loan.getDueDate()
         );
@@ -151,6 +153,7 @@ public class LoanHelper {
         LoanCreatedEventPayload payload = new LoanCreatedEventPayload(
                 customer.getId(),
                 loan.getId(),
+                loan.getLoanProduct().getName(),
                 loan.getAmount(),
                 loan.getDueDate(),
                 loan.getState().toString(),

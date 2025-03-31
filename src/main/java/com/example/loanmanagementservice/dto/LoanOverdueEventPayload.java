@@ -15,6 +15,8 @@ import java.time.LocalDate;
 public class LoanOverdueEventPayload {
     private Long customerId;
     private Long loanId;
+    private String loanName;
+    private String customerName;
     private BigDecimal overdueAmount;
     private LocalDate dueDate;
 }
