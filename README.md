@@ -16,6 +16,7 @@ The Loan Management Service API handles loan creation, retrieval, state updates,
 - **Java 21**
 - **Spring Boot 3.3.4**
 - **MySQL**
+- **Rabbit MQ**
 
 ## API Endpoints
 
@@ -72,7 +73,7 @@ To containerize the application, follow these steps:
 
 ### Build the JAR file:
 ```sh
-mvn clean package -DskipTests
+mvn clean package
 ```
 
 ### Create a `Dockerfile` in the project root:
@@ -86,6 +87,6 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 ### Build and run the Docker container:
 ```sh
 docker build -t loan-management-service .
-docker run -p 8080:8080 loan-management-service
+docker run -p 8084:8080 loan-management-service
 ```
 
